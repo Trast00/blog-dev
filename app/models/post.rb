@@ -14,4 +14,8 @@ class Post < ApplicationRecord
   def update_post_counter
     author.increment!(:posts_count)
   end
+
+  validates :title, presence: true, length: { maximum: 250 }
+  validates :likes_count, numericality: { only_integer: true, greater_or_equal_to: 0 }
+  validates :comments_count, numericality: { only_integer: true, greater_or_equal_to: 0}
 end
