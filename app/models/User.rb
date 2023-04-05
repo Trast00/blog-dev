@@ -1,9 +1,9 @@
- class User < ApplicationRecord
-  has_many: comment
-  has_many: post
-  has_many: like
-  
-  def getTopThree
-    User.limite(3)
+class User < ApplicationRecord
+  has_many :comments
+  has_many :posts
+  has_many :likes
+
+  def recent_post
+    Post.where(author: self).order(created_at: :desc).limit(3)
   end
- end
+end

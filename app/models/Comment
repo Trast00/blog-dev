@@ -1,4 +1,0 @@
-class Comment
-  belong_to: user
-  
-end
