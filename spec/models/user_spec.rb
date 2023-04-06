@@ -9,7 +9,6 @@ RSpec.describe User, type: :model do
     expect(subject).to_not be_valid
   end
 
-
   it 'posts_count should be present' do
     subject.posts_count = nil
     expect(subject).to_not be_valid
