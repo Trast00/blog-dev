@@ -8,5 +8,5 @@ class User < ApplicationRecord
   end
 
   validates :name, presence: true
-  validates :posts_count, numericality: { only_integer: true, greater_or_equal_to: 0}
+  validates :posts_count, numericality: { only_integer: true, greater_or_equal_to: 0 }
 end
