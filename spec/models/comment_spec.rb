@@ -29,4 +29,9 @@ RSpec.describe Comment, type: :model do
     subject.post = nil
     expect(subject).to_not be_valid
   end
+
+  it 'Comment should not be valid withou text' do
+    subject.text = nil
+    expect(subject).to_not be_valid
+  end
 end

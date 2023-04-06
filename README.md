@@ -138,7 +138,11 @@ To run the project, execute the following command:
 
 ### Run tests
 
-No Test available yet!
+To run tests, run the following command:
+
+```sh
+  rails rspec spec
+```
 
 ### Deployment
 
