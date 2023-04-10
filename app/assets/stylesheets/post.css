@@ -1,3 +1,21 @@
 .user-heading, .list-post > li {
   margin-top: 24px;
 }
+
+section {
+  margin-top: 24px;
+  padding: 16px;
+}
+
+.post-heading {
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.post-subheading {
+  align-items: flex-end;
+}
+
+.post-subheading p {
+  margin-left: 12px;
+}
