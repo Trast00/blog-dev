@@ -41,13 +41,6 @@ The **Blog-dev** is a fully functional website that allows users to view a list 
 ### Tech Stack <a name="tech-stack"></a>
 
 <details>
-  <summary>Client</summary>
-  <ul>
-    <li><a href="https://reactjs.org/">React.js</a></li>
-  </ul>
-</details>
-
-<details>
   <summary>Server</summary>
   <ul>
     <li><a href="https://guides.rubyonrails.org/">Ruby on Rails</a></li>
