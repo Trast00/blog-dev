@@ -5,6 +5,7 @@
 .post {
   margin-top: 16px;
   padding: 16px;
+  cursor: pointer;
 }
 
 img {
@@ -28,7 +29,8 @@ img {
   right: 12px;
 }
 
-h2, h3 {
+h2,
+h3 {
   font-size: 20px;
 }
 
@@ -36,7 +38,8 @@ h2, h3 {
   justify-content: flex-end;
 }
 
-.user-heading, .bio {
+.user-heading,
+.bio {
   padding: 16px;
   margin-top: 24px;
 }
