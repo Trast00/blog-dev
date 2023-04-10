@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding: 24px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.row {
+  display: flex;
+}
+
+.row.wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.no-style {
+  list-style: none;
+  text-decoration: none;
+}
+
+.max-width {
+  width: 100%;
+}
+
+.borded {
+  border: 1px solid #d3d3d3;
+}
