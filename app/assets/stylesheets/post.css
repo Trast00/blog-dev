@@ -20,3 +20,7 @@ section {
 .post-subheading p {
   margin-left: 12px;
 }
+
+.list-comment {
+  padding: 6px;
+}

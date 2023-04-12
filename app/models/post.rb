@@ -4,7 +4,7 @@ class Post < ApplicationRecord
   belongs_to :author, class_name: 'User', counter_cache: true
 
   def recent_comment
-    Comment.where(post: self).order(created_at: :desc).limit(5)
+    Comment.where(post: self).order(created_at: :asc).limit(5)
   end
 
   after_save :update_post_counter

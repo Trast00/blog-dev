@@ -7,16 +7,29 @@
   </head>
 
   <body>
-    <section class="row wrap borded user-heading">
-      <img src="Image" alt="Bloc Image" />
-      <div class="column post-description">
-        <h2>User Name</h2>
-        <p class="number-post">Number of post: x</p>
-      </div>
+    <section class="row wrap user-heading">
+      <%= render partial: "shared/user", locals: { user: @user } %>
     </section>
 
     <section class="flex-center column">
       <ul class="max-width list-post">
+        <% @posts.each do |post| %>
+          <li class="column max-width">
+            <a href=<%= "/users/#{@user.id}/posts/#{post.id}" %> class="no-style max-width">
+              <%= render partial: "shared/post", locals: { post: post }  %>
+              <ul class="no-style list-comment borded">
+                <% post.recent_comment.each do |comment| %>
+                  <li>
+                    <%= render partial: "shared/comment", locals: { user: @user, comment: comment}  %>
+                  </li>
+                <% end %>
+              </ul>
+            </a>
+          </li>
+        <% end %>
+
+
+
         <li class="column borded">
           <div class="post">
             <h3>Post #1</h3>
@@ -33,22 +46,8 @@
             <li>Username: Comment 4</li>
           </ul>
         </li>
-        <li class="column borded">
-          <div class="post">
-            <h3>Post #1</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc auctor orci a elit faucibus, quis consectetur risus euismod. Duis sit amet enim quis nisl rutrum tincidunt ac in est. Donec quis sodales turpis. Integer quis metus lacus. Sed vestibulum tortor at tellus venenatis, ut maximus nibh malesuada. Phasellus ut odio arcu.</p>
-            <div class="row btns-post">
-              <p>Comments: X</p>
-              <p>Likes: X</p>
-            </div>
-          </div>
-          <ul class="no-style list-comment borded">
-            <li>Username: Comment 1</li>
-            <li>Username: Comment 2</li>
-            <li>Username: Comment 3</li>
-            <li>Username: Comment 4</li>
-          </ul>
-        </li>
+
+
       </ul>
       <button class="btn-show-post">Pagination</button>
     </section>
