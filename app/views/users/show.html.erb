@@ -26,7 +26,16 @@
           </li>
         <% end %>
       </ul>
-      <button class="btn-show-post">See All Posts</button>
+      <button class="btn-show-post">
+        <a href=<%= "/users/#{@user.id}/posts"%>
+        class="no-style">See All Posts</a>
+      </button>
+      <button class="btn-show-post">
+        <a href=<%= "/users" %> 
+        class="no-style"> Back
+        </a>
+      </button>
+      
     </div>
   </body>
 </html>
