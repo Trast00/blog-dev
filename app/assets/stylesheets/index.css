@@ -34,6 +34,7 @@ h1 {
 .no-style {
   list-style: none;
   text-decoration: none;
+  color: black;
 }
 
 .max-width {
