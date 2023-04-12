@@ -7,12 +7,8 @@
   </head>
 
   <body>
-    <section class="row wrap borded user-heading">
-      <img src="Image" alt="Bloc Image" />
-      <div class="column post-description">
-        <h2>User Name</h2>
-        <p class="number-post">Number of post: x</p>
-      </div>
+    <section class="row wrap user-heading">
+      <%= render partial: "shared/user", locals: { user: @user} %>
     </section>
 
     <section class="column borded bio">
@@ -21,31 +17,14 @@
     </section>
 
     <div class="flex-center column">
-      <ul class="max-width">
-        <li class="column borded post">
-          <h3>Post #1</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc auctor orci a elit faucibus, quis consectetur risus euismod. Duis sit amet enim quis nisl rutrum tincidunt ac in est. Donec quis sodales turpis. Integer quis metus lacus.</p>
-          <div class="row btns-post">
-            <p>Comments: X</p>
-            <p>Likes: X</p>
-          </div>
-        </li>
-        <li class="column borded post">
-          <h3>Post #1</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc auctor orci a elit faucibus, quis consectetur risus euismod. Duis sit amet enim quis nisl rutrum tincidunt ac in est. Donec quis sodales turpis. Integer quis metus lacus.</p>
-          <div class="row btns-post">
-            <p>Comments: X</p>
-            <p>Likes: X</p>
-          </div>
-        </li>
-        <li class="column borded post">
-          <h3>Post #1</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc auctor orci a elit faucibus, quis consectetur risus euismod. Duis sit amet enim quis nisl rutrum tincidunt ac in est. Donec quis sodales turpis. Integer quis metus lacus.</p>
-          <div class="row btns-post">
-            <p>Comments: X</p>
-            <p>Likes: X</p>
-          </div>
-        </li>
+      <ul class="no-style max-width">
+        <% @posts.each do |post| %>
+          <li>
+            <a href=<%= "/users/#{@user.id}/posts" %> class="no-style">
+              <%= render partial: "shared/post", locals: { post: post} %>
+            </a>
+          </li>
+        <% end %>
       </ul>
       <button class="btn-show-post">See All Posts</button>
     </div>
