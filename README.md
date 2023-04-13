@@ -7,14 +7,12 @@
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
-  - [🚀 Live Demo ](#-live-demo-)
   - [💻 Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
     - [Install](#install)
     - [Usage](#usage)
     - [Run tests](#run-tests)
-    - [Deployment](#deployment)
   - [👥 Authors ](#-authors-)
   - [🔭 Future Features ](#-future-features-)
   - [🤝 Contributing ](#-contributing-)
@@ -50,13 +48,6 @@ The **Blog-dev** is a fully functional website that allows users to view a list 
 - **Blog webapp**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-## 🚀 Live Demo <a name="live-demo"></a>
-
-- **No Live Demo Link Available yet**
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
@@ -104,12 +95,7 @@ To run tests, run the following command:
   rails rspec spec
 ```
 
-### Deployment
-
-No Deployment available yet!
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 ## 👥 Authors <a name="authors"></a>
 
