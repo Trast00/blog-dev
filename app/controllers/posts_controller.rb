@@ -22,10 +22,10 @@ class PostsController < ApplicationController
     @post = Post.new(params.require(:post).permit(:title, :text))
     @post.author = current_user
     if @post.save
-      flash[:success] = "Post saved successfully"
-      redirect_to "/users/#{current_user.id}/posts/#{@post.id}" #post_path(@post.id)
+      flash[:success] = 'Post saved successfully'
+      redirect_to "/users/#{current_user.id}/posts/#{@post.id}" # post_path(@post.id)
     else
-      flash.now[:error] = "Error: Post could not be saved"
+      flash.now[:error] = 'Error: Post could not be saved'
       render :new
     end
   end
@@ -37,9 +37,9 @@ class PostsController < ApplicationController
     comment.author = @user
     comment.post = @post
     if comment.save
-      flash[:success] = "Post saved successfully"
+      flash[:success] = 'Post saved successfully'
     else
-      flash.now[:error] = "Error: Post could not be saved"
+      flash.now[:error] = 'Error: Post could not be saved'
     end
     redirect_to "/users/#{@user.id}/posts/#{@post.id}"
   end
@@ -49,9 +49,9 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id_post])
     like = Like.new(author: @user, post: @post)
     if like.save
-      flash[:success] = "Liked"
+      flash[:success] = 'Liked'
     else
-      flash.now[:error] = "Error While Like"
+      flash.now[:error] = 'Error While Like'
     end
     redirect_to "/users/#{@user.id}/posts/#{@post.id}"
   end
