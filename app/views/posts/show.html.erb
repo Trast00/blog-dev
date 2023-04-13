@@ -7,6 +7,9 @@
   </head>
 
   <body>
+    <% if flash.now[:success].present? %>
+      <span class="success-message"><%= flash[:success] %></span>
+    <% end %>
     <section class="borded">
       <div class="row wrap post-heading">
         <div class="row wrap post-subheading">

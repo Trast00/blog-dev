@@ -32,6 +32,10 @@
       <a href=<%= "/users/#{@user.id}" %> >
         <button class="btn-show-post">Back</button>
       </a>
+      <button class="btn-show-post">
+        <a href=<%= "/users/#{@user.id}/posts/new"%>
+        class="no-style">Create A Posts</a>
+      </button>
     </section>
   </body>
 </html>

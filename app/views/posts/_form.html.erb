@@ -1,0 +1,11 @@
+<%= form_with model: @post, local: true, url: "/users/#{@user.id}/posts/create", 
+html: {class: "column"} do |f| %>
+  <%= f.text_field :title, 
+    placeholder: "Title",
+    maxlength: 250,
+    required: true
+  %>
+  <%= f.label :title, "maximum 250 characters" %>
+  <%= f.text_area :text, placeholder: "text ...", required: true %>
+  <%= f.submit "Create Post" %>
+<% end %>
