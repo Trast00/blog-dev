@@ -10,6 +10,9 @@
     <% if flash.now[:success].present? %>
       <span class="success-message"><%= flash[:success] %></span>
     <% end %>
+    <% if flash.now[:error].present? %>
+      <span class="error-message"><%= flash.now[:error] %></span>
+    <% end %>
     <section class="borded">
       <div class="row wrap post-heading">
         <div class="row wrap post-subheading">
@@ -22,7 +25,10 @@
         </div>
       </div>
       <p><%= @post.text %></p>
-    
+      <%= form_with model: Like.new, local: true, url: "/users/#{@user.id}/posts/#{@post.id}/add_like", 
+        html: {class: "row"} do |f| %>
+        <%= f.submit "Like" %>
+      <% end %>
     </section>
     <section class="borded">
       <ul class="no-style list-comment">
@@ -35,9 +41,6 @@
     </section>
 
     <section class="borded flex-center">
-      <% if flash.now[:error].present? %>
-        <span class="error-message"><%= flash.now[:error] %></span>
-      <% end %>
       <%= render partial: "posts/form_new_comment" %>
     </section>
   </body>
