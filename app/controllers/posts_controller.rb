@@ -29,4 +29,18 @@ class PostsController < ApplicationController
       render :new
     end
   end
+
+  def add_comment
+    @user = current_user
+    @post = Post.find(params[:id_post])
+    comment = Comment.new(params.require(:comment).permit(:text))
+    comment.author = @user
+    comment.post = @post
+    if comment.save
+      flash[:success] = "Post saved successfully"
+    else
+      flash.now[:error] = "Error: Post could not be saved"
+    end
+    redirect_to "/users/#{@user.id}/posts/#{@post.id}"
+  end
 end

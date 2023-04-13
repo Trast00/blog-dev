@@ -33,5 +33,12 @@
         <% end %>
       </ul>
     </section>
+
+    <section class="borded flex-center">
+      <% if flash.now[:error].present? %>
+        <span class="error-message"><%= flash.now[:error] %></span>
+      <% end %>
+      <%= render partial: "posts/form_new_comment" %>
+    </section>
   </body>
 </html>
