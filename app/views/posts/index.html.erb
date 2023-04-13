@@ -29,13 +29,14 @@
         <% end %>
 
       </ul>
-      <a href=<%= "/users/#{@user.id}" %> >
-        <button class="btn-show-post">Back</button>
-      </a>
       <button class="btn-show-post">
         <a href=<%= "/users/#{@user.id}/posts/new"%>
         class="no-style">Create A Posts</a>
       </button>
+      
+      <a href=<%= "/users/#{@user.id}" %> >
+        <button class="btn-show-post">Back</button>
+      </a>
     </section>
   </body>
 </html>

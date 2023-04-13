@@ -3,5 +3,5 @@
   <% if flash.now[:error].present? %>
     <span class="error-message"><%= flash.now[:error] %></span>
   <% end %>
-  <%= render partial: "posts/form", locals: { post: @post } %>
+  <%= render partial: "posts/form_new_post", locals: { post: @post } %>
 </main>
