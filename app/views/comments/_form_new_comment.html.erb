@@ -1,0 +1,5 @@
+<%= form_with model: Comment.new, local: true, url: "/users/#{@user.id}/posts/#{@post.id}/comments", 
+html: {class: "column"} do |f| %>
+  <%= f.text_area :text, placeholder: "Comment ...", required: true %>
+  <%= f.submit "Add Comment" %>
+<% end %>

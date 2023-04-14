@@ -24,3 +24,17 @@ section {
 .list-comment {
   padding: 6px;
 }
+
+.success-message {
+  color: green;
+  padding: 2px 24px;
+  border-radius: 4px;
+  background-color: #9eef9e;
+}
+
+.error-message {
+  color: red;
+  padding: 2px 24px;
+  border-radius: 4px;
+  background-color: #ef9e9e;
+}

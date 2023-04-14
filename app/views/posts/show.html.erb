@@ -7,6 +7,8 @@
   </head>
 
   <body>
+    <%= flash_error %>
+    <%= flash_success %>
     <section class="borded">
       <div class="row wrap post-heading">
         <div class="row wrap post-subheading">
@@ -19,7 +21,10 @@
         </div>
       </div>
       <p><%= @post.text %></p>
-    
+      <%= form_with model: Like.new, local: true, url: "/users/#{@user.id}/posts/#{@post.id}/likes", 
+        html: {class: "row"} do |f| %>
+        <%= f.submit "Like" %>
+      <% end %>
     </section>
     <section class="borded">
       <ul class="no-style list-comment">
@@ -29,6 +34,12 @@
           </li>
         <% end %>
       </ul>
+    </section>
+
+    <section>
+      <a href=<%= "/users/#{@user.id}/posts/#{@post.id}/comments/new" %>>
+        <button>Add Comment</button>
+      </a>
     </section>
   </body>
 </html>
