@@ -21,7 +21,7 @@
         </div>
       </div>
       <p><%= @post.text %></p>
-      <%= form_with model: Like.new, local: true, url: "/users/#{@user.id}/posts/#{@post.id}/add_like", 
+      <%= form_with model: Like.new, local: true, url: "/users/#{@user.id}/posts/#{@post.id}/likes", 
         html: {class: "row"} do |f| %>
         <%= f.submit "Like" %>
       <% end %>
@@ -34,6 +34,12 @@
           </li>
         <% end %>
       </ul>
+    </section>
+
+    <section>
+      <a href=<%= "/users/#{@user.id}/posts/#{@post.id}/comments/new" %>>
+        <button>Add Comment</button>
+      </a>
     </section>
   </body>
 </html>

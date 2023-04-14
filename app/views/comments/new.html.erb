@@ -1,3 +1,5 @@
 <main class="borded flex-center">
-  <%= render partial: "posts/form_new_comment" %>
+  <%= flash_error %>
+  <%= flash_success %>
+  <%= render partial: "comments/form_new_comment" %>
 </main>

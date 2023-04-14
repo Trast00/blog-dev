@@ -65,7 +65,8 @@ form label {
   color: #838383;
 }
 
-form [type="submit"] {
+form [type="submit"],
+button {
   max-width: 150px;
   color: white;
   border-radius: 4px;
@@ -74,6 +75,11 @@ form [type="submit"] {
   background-color: rgb(75, 75, 186);
 }
 
-form [type="submit"]:hover {
+form [type="submit"]:hover,
+button:hover {
   background-color: rgb(32, 32, 132);
+}
+
+button {
+  padding: 8px;
 }
