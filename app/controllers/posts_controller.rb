@@ -19,7 +19,7 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.new(params.require(:post).permit(:title, :text))
+    @post = Post.new(params_posts)
     @post.author = current_user
     if @post.save
       flash[:success] = 'Post saved successfully'
@@ -54,5 +54,11 @@ class PostsController < ApplicationController
       flash.now[:error] = 'Error While Like'
     end
     redirect_to "/users/#{@user.id}/posts/#{@post.id}"
+  end
+
+  private 
+
+  def params_posts
+    params.require(:post).permit(:title, :text)
   end
 end
