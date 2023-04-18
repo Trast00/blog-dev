@@ -1,6 +1,5 @@
 require 'rails_helper'
 
-# test for index view of users
 RSpec.describe 'Users', type: :system do
   let!(:first_user) do
     User.create(name: 'Tom 3',
