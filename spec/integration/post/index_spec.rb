@@ -2,7 +2,9 @@ require 'rails_helper'
 
 RSpec.describe 'Post', type: :system do
   before(:all) do
-    @user = User.first
+    @user = User.create(name: 'Tom',
+                        photo: 'https://avatars.githubusercontent.com/u/74411135?s=400&u=ab8a7e4c6500ab7f1e058755215e500e82f0821a&v=4',
+                        bio: 'Teacher from Mexico.', posts_count: 15)
 
     post1 = Post.create(author: @user, title: 'Hello1', text: 'This is my first post')
     post2 = Post.create(author: @user, title: 'Hello2', text: 'This is my first post')

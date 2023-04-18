@@ -1,8 +1,16 @@
 require 'rails_helper'
 
 RSpec.describe 'Users', type: :system do
-  let!(:first_user) { User.first }
-  let!(:second_user) { User.second }
+  let!(:first_user) do
+    User.create(name: 'Tom',
+                photo: 'https://avatars.githubusercontent.com/u/74411135?s=400&u=ab8a7e4c6500ab7f1e058755215e500e82f0821a&v=4',
+                bio: 'Teacher from Mexico.', posts_count: 15)
+  end
+  let!(:second_user) do
+    User.create(name: 'Lilly',
+                photo: 'https://cdn.vectorstock.com/i/preview-1x/10/70/super-cool-pizza-character-cartoon-vector-15811070.webp',
+                bio: 'Teacher from Poland.')
+  end
   let!(:users) { [first_user, second_user] }
   it 'username of all users' do
     users.each do |user|
