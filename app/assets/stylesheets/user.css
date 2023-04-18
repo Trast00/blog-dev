@@ -15,7 +15,7 @@ img {
   background-color: #c37d7d;
 }
 
-.post-description, 
+.post-description,
 .user-description {
   display: flex;
   flex: 1;

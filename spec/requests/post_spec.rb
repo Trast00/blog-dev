@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe PostsController, type: :request do
-  let!(:first_user) { User.first}
+  let!(:first_user) { User.first }
   let!(:first_post) { Post.create(author: first_user, title: 'Hello2', text: 'This is my first post') }
 
   it 'test GET index' do

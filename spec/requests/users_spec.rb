@@ -1,8 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe UsersController, type: :request do
-
-  let!(:first_user) { User.first}
+  let!(:first_user) { User.first }
 
   it 'test GET index' do
     get '/'

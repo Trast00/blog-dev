@@ -2,7 +2,7 @@ require 'test_helper'
 
 WINDOWS_HOST = `cat/etc/resolv.conf | grep nameserver | awk '{ print $2 }'`.strip
 
-CHROMEDRIVER_URL = "http//#{WINDOWS_HOST}:9515"
+CHROMEDRIVER_URL = "http//#{WINDOWS_HOST}:9515".freeze
 
 class ApplicationSystemTestCase < ActionDispatch::SystemTestCase
   driven_by :selenium, using: :chrome, screen_size: [1400, 1400]
@@ -16,10 +16,10 @@ class ApplicationSystemTestCase < ActionDispatch::SystemTestCase
       browser: :remote,
       url: CHROMEDRIVER_URL,
       desired_capabilities: :chrome,
-      options: options
+      options:
     )
   end
-  
+
   Capybara.configure do |config|
     # Match what's set for URL options in test.rb so we
     # can test mailers that contain links.
