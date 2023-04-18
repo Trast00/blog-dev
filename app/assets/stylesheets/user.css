@@ -2,7 +2,8 @@
   margin: 24px;
 }
 
-.post {
+.post,
+.user {
   margin-top: 16px;
   padding: 16px;
   cursor: pointer;
@@ -14,7 +15,8 @@ img {
   background-color: #c37d7d;
 }
 
-.post-description {
+.post-description,
+.user-description {
   display: flex;
   flex: 1;
   position: relative;

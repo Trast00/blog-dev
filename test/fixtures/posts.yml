@@ -1,0 +1,29 @@
+first_post:
+  title: Hello2
+  text: 'This is my first post'
+  author_id: 1
+  
+second_post:
+  title: Hello2
+  text: 'This is my first post'
+  author_id: 1
+
+third_post:
+  title: Hello2
+  text: 'This is my first post'
+  author_id: 1
+
+fourth_post:
+  title: Hello2
+  text: 'This is my first post'
+  author_id: 2
+
+fifth_post:
+  title: Hello2
+  text: 'This is my first post'
+  author_id: 2
+
+sixth_post:
+  title: Hello2
+  text: 'This is my first post'
+  author_id: 2

@@ -18,7 +18,7 @@
             <a href=<%= "/users/#{@user.id}/posts/#{post.id}" %> class="no-style max-width">
               <%= render partial: "shared/post", locals: { post: post }  %>
               <ul class="no-style list-comment borded">
-                <% post.recent_comment.each do |comment| %>
+                <% post.comments.take(5).each do |comment| %>
                   <li>
                     <%= render partial: "shared/comment", locals: { user: @user, comment: comment}  %>
                   </li>
@@ -34,6 +34,10 @@
         class="no-style">Create A Posts</a>
       </button>
       
+      <a href=<%= "/users/#{@user.id}" %> >
+        <button class="btn-pagination">Pagination</button>
+      </a>
+
       <a href=<%= "/users/#{@user.id}" %> >
         <button class="btn-show-post">Back</button>
       </a>
