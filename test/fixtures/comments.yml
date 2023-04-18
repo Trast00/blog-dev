@@ -1,0 +1,20 @@
+first_comment:
+  text: 'first comment'
+  author_id: 1
+  post_id: 1
+  
+second_comment:
+  text: 'first comment'
+  author_id: 1
+  post_id: 1
+
+third_comment:
+  text: 'first comment'
+  author_id: 1
+  post_id: 1
+
+fourth_comment:
+  text: 'first comment'
+  author_id: 1
+  post_id: 1
+  

@@ -4,7 +4,7 @@ RSpec.describe 'Users', type: :system do
   let!(:first_user) { User.first}
   let!(:second_user) { User.second }
   let!(:users) { [first_user, second_user] }
-  let!(:posts) { Post.all }
+  #let!(:posts) { Post.all }
   
   context "test user index " do
     it 'displays usernames of all users' do
@@ -33,7 +33,6 @@ RSpec.describe 'Users', type: :system do
       users.each do |user|
         click_on user.name
         expect(has_current_path?("/users/#{user.id}", wait: 5)).to be_truthy
-        #expect(page).to have_text('Bio') # Bio is available only on "user/show" page
         visit "/"
       end
     end
