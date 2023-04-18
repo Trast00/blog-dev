@@ -13,14 +13,14 @@
 
     <section class="column borded bio">
       <h2>Bio</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc auctor orci a elit faucibus, quis consectetur risus euismod. Duis sit amet enim quis nisl rutrum tincidunt ac in est. Donec quis sodales turpis. Integer quis metus lacus. Sed vestibulum tortor at tellus venenatis, ut maximus nibh malesuada. Phasellus ut odio arcu. Pellentesque sollicitudin, lectus non eleifend lobortis, ex sapien ultrices tellus, nec suscipit odio eros id mi. Quisque bibendum eleifend dui eget consequat. Integer consequat nibh quis ante dignissim elementum. Nam quis blandit ex. Sed congue nulla euismod tincidunt lacinia.</p>
+      <p><%= @user.bio %></p>
     </section>
 
     <div class="flex-center column">
       <ul class="no-style max-width">
         <% @posts.each do |post| %>
           <li>
-            <a href=<%= "/users/#{@user.id}/posts" %> class="no-style">
+            <a href=<%= "/users/#{@user.id}/posts/#{post.id}" %> class="no-style">
               <%= render partial: "shared/post", locals: { post: post} %>
             </a>
           </li>
@@ -28,7 +28,7 @@
       </ul>
       <button class="btn-show-post">
         <a href=<%= "/users/#{@user.id}/posts"%>
-        class="no-style">See All Posts</a>
+        class="no-style" id="btn-show-posts">See All Posts</a>
       </button>
       <button class="btn-show-post">
         <a href=<%= "/users/#{@user.id}/posts/new"%>
