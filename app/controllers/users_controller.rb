@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  before_action :authenticate_user!
+
   def index
     @users = User.all.order(posts_count: :desc)
   end
