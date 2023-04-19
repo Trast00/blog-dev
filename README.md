@@ -105,6 +105,18 @@ To run tests, run the following command:
 - Twitter: [@twitterhandle](https://twitter.com/AllassaneDicko0/)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/allassane-dicko-744aaa224)
 
+👤 **Prantosh Biswas**
+
+- GitHub:  [@PrantoshB](https://github.com/PrantoshB)
+- LinkedIn: [Prantosh Biswas](https://www.linkedin.com/in/prantosh/)
+- Twitter: [@prantalks](https://twitter.com/prantalks)
+
+👤 **Tsohle Mokhemisi**
+
+- GitHub: [@githubhandle](https://github.com/tsohleDev)
+- Twitter: [@twitterhandle](https://twitter.com/RealTsohle)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/tsohle-mokhemisi-3687401b2/)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🔭 Future Features <a name="future-features"></a>
