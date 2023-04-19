@@ -7,6 +7,11 @@
   </head>
 
   <body>
+    <% if user_signed_in? %>
+      <p>You are already signed in</p>
+    <% else %>
+      <p>You are not signed in</p>
+    <% end %>
     <ul class="column no-style list-post">
       <% @users.each do |user| %>
         <li class="max-width">

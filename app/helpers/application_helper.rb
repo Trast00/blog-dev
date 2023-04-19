@@ -10,4 +10,5 @@ module ApplicationHelper
     html += content_tag(:span, flash.now[:success], class: 'success-message') if flash.now[:success].present?
     html.html_safe
   end
+
 end
