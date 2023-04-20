@@ -4,6 +4,15 @@ class Comment < ApplicationRecord
 
   validates :text, presence: true
 
+  def as_json(_options = {})
+    {
+      id:,
+      text:,
+      author_id:,
+      post_id:
+    }
+  end
+
   after_save :update_comment_counter
 
   private

@@ -7,6 +7,17 @@ class Post < ApplicationRecord
     Comment.where(post: self).order(created_at: :asc).limit(5)
   end
 
+  def as_json(_options = {})
+    {
+      id:,
+      title:,
+      text:,
+      author_id:,
+      comments_count:,
+      likes_count:
+    }
+  end
+
   after_save :update_post_counter
 
   private
