@@ -24,10 +24,10 @@ class CommentsController < ApplicationController
 
   def destroy
     comment = Comment.find(params[:id])
-    respond_to do |format|    
+    respond_to do |format|
       if comment.destroy
         # Successfully deleted the record
-        flash[:success] = "Comment deleted successfully"
+        flash[:success] = 'Comment deleted successfully'
       else
         # Failed to delete the record
         flash.now[:error] = 'Error: Comment could not be deleted'

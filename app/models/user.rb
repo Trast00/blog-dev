@@ -11,10 +11,8 @@ class User < ApplicationRecord
     Post.where(author: self).order(created_at: :desc).limit(3)
   end
 
-  Roles = [ :admin , :user ]
-
-  def is?( requested_role )
-    self.role == requested_role.to_s
+  def is?(requested_role)
+    role == requested_role.to_s
   end
 
   validates :name, presence: true

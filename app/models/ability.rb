@@ -7,15 +7,15 @@ class Ability
 
     user ||= User.new # guest user (not logged in)
     can :read, :all
-    
+
     can :destroy, Post, author_id: user.id
     can :destroy, Comment, author_id: user.id
 
     return unless user.is? :admin
 
     can :destroy, :all
-    
-    
+
+
     #
     # The first argument to `can` is the action you are giving the user
     # permission to do.
