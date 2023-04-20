@@ -23,7 +23,7 @@
       <p><%= @post.text %></p>
       <%= form_with model: Like.new, local: true, url: "/users/#{@post.author.id}/posts/#{@post.id}/likes", 
         html: {class: "row"} do |f| %>
-        <%= f.submit "Like" %>
+        <%= f.submit "Like", class: "auto-width" %>
       <% end %>
     </section>
     <section class="borded">
@@ -37,10 +37,16 @@
       </ul>
     </section>
 
-    <section>
+    <section class="max-width flex-center column">
       <a href=<%= "/users/#{@post.author.id}/posts/#{@post.id}/comments/new" %>>
         <button>Add Comment</button>
       </a>
+      <% if can? :destroy , @post %>
+        <%= form_with model: @post, method: :delete, local: true, url: "/users/#{@post.author.id}/posts/#{@post.id}/",
+          html: {class: "row flex-center"} do |f| %>
+          <%= f.submit "Delete Post", class: "auto-width" %>
+          <% end %>
+      <% end %>
     </section>
   </body>
 </html>

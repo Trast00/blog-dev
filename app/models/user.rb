@@ -11,6 +11,10 @@ class User < ApplicationRecord
     Post.where(author: self).order(created_at: :desc).limit(3)
   end
 
+  def is?(requested_role)
+    role == requested_role.to_s
+  end
+
   validates :name, presence: true
   validates :posts_count, numericality: { only_integer: true, greater_or_equal_to: 0 }
 end
