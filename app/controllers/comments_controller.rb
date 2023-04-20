@@ -1,10 +1,18 @@
 class CommentsController < ApplicationController
+  def index
+    @comments = Comment.where(post_id: params[:post_id])
+    respond_to do |format|
+      format.json { render json: @comments }
+    end
+  end
+
   def new
     @user = current_user
     @post = Post.find(params[:post_id])
   end
 
   def create
+    before_action :authenticate_user!
     @user = current_user
     @post = Post.find(params[:post_id])
     comment = Comment.new(params_comments)
@@ -15,9 +23,11 @@ class CommentsController < ApplicationController
       if comment.save
         flash[:success] = 'Comment saved successfully'
         format.html { redirect_to "/users/#{@user.id}/posts/#{@post.id}" }
+        format.json { render json: comment, status: :created }
       else
         flash.now[:error] = 'Error: Comment could not be saved'
         format.html { render :new }
+        format.json { render json: { error: 'Error: Comment could not be saved' }, status: :unprocessable_entity }
       end
     end
   end
